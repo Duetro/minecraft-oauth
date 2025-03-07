@@ -33,12 +33,12 @@ abstract class DataRetriever
                         $nested_key = (int) $nested_key;
                     }
                     if (! isset($data[$nested_key])) {
-                        throw new ResponseValidationException("Nested key $expected_key ($nested_key) not found");
+                        throw new ResponseValidationException("Nested key $expected_key ($nested_key) not found: " . json_encode($original_data));
                     }
                     $data = $data[$nested_key];
                 }
             } elseif (! isset($data[$expected_key])) {
-                throw new ResponseValidationException("Key $expected_key not found (available keys: " . implode(', ', array_keys($original_data)) . ")");
+                throw new ResponseValidationException("Key $expected_key not found: " . json_encode($original_data));
             }
         }
 
