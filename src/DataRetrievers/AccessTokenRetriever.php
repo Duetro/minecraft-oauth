@@ -14,7 +14,6 @@ class AccessTokenRetriever extends DataRetriever
             'expires_in',
             'scope',
             'access_token',
-            'refresh_token',
             'user_id',
         ];
     }
