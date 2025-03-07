@@ -55,7 +55,7 @@ abstract class DataRetriever
         try {
             $data = json_decode($response->getBody()->getContents(), true, 512, JSON_THROW_ON_ERROR);
         } catch (JsonException $exception) {
-            throw new ResponseValidationException('Invalid JSON body');
+            throw new ResponseValidationException('Invalid JSON body: ' . $response->getBody()->getContents());
         }
 
         return $data;
