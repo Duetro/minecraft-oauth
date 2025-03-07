@@ -38,7 +38,7 @@ abstract class DataRetriever
                     $data = $data[$nested_key];
                 }
             } elseif (! isset($data[$expected_key])) {
-                throw new ResponseValidationException("Key $expected_key not found");
+                throw new ResponseValidationException("Key $expected_key not found (available keys: " . implode(', ', array_keys($original_data)) . ")");
             }
         }
 

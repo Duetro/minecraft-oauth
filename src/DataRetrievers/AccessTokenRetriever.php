@@ -10,7 +10,6 @@ class AccessTokenRetriever extends DataRetriever
     public function expectedResponseKeys(): array
     {
         return [
-            'token_type',
             'expires_in',
             'scope',
             'access_token',
