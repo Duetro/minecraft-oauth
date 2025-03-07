@@ -3,7 +3,7 @@
     "description": "Provides easy layer to get a Minecraft profile from a Microsoft Live OAuth session",
     "require": {
         "guzzlehttp/guzzle": "^7.5",
-        "ramsey/uuid": "^3.9",
+        "ramsey/uuid": "^4.7",
         "symfony/polyfill-php80": "^1.27"
     },
     "require-dev": {
@@ -29,9 +29,6 @@
     "config": {
         "allow-plugins": {
             "pestphp/pest-plugin": true
-        },
-        "platform": {
-            "php": "7.4"
         }
     }
 }
